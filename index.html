@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gdzie szukać wsparcia</title>
+  <meta name="description" content="Interaktywny przewodnik dla nauczycieli akademickich Akademii Leona Koźmińskiego: do kogo zgłosić sprawę dydaktyczną lub techniczną.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- =====================================================================
+     IKONY (Lucide, licencja ISC) — sprite; użycie: <svg><use href="#i-nazwa"/></svg>
+     ===================================================================== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></symbol>
+    <symbol id="i-graduation" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+    <symbol id="i-laptop" viewBox="0 0 24 24"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/></symbol>
+    <symbol id="i-lightbulb" viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></symbol>
+    <symbol id="i-cog" viewBox="0 0 24 24"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"/><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M12 2v2"/><path d="M12 22v-2"/><path d="m17 20.66-1-1.73"/><path d="M11 10.27 7 3.34"/><path d="m20.66 17-1.73-1"/><path d="m3.34 7 1.73 1"/><path d="M14 12h8"/><path d="M2 12h2"/><path d="m20.66 7-1.73 1"/><path d="m3.34 17 1.73-1"/><path d="m17 3.34-1 1.73"/><path d="m11 13.73-4 6.93"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-pointer" viewBox="0 0 24 24"><path d="M14 4.1 12 6"/><path d="m5.1 8-2.9-.8"/><path d="m6 12-1.9 2"/><path d="M7.2 2.2 8 5.1"/><path d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-login" viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></symbol>
+    <symbol id="i-paperclip" viewBox="0 0 24 24"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
+    <symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></symbol>
+    <symbol id="i-hash" viewBox="0 0 24 24"><path d="M4 9h16"/><path d="M4 15h16"/><path d="M10 3 8 21"/><path d="M16 3l-2 18"/></symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24"><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/><circle cx="12" cy="12" r="10"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#main">Przejdź do treści</a>
+
+<!-- ============================ NAGŁÓWEK ============================ -->
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="site-header__logo" href="#top" aria-label="Akademia Leona Koźmińskiego — początek strony">
+      <img src="assets/logo-kozminski.svg" alt="" width="72" height="36">
+    </a>
+    <nav class="site-nav" aria-label="Sekcje przewodnika">
+      <a href="#wsparcie-dydaktyczne">Wsparcie dydaktyczne</a>
+      <a href="#szybki-wybor">Szybki wybór</a>
+      <a href="#wsparcie-techniczne">Wsparcie techniczne</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============================ HERO ============================ -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="container">
+      <p class="eyebrow"><span class="eyebrow__bar" aria-hidden="true"></span>Przewodnik dla nauczycieli akademickich</p>
+      <h1 id="hero-title">Gdzie szukać wsparcia?</h1>
+      <p class="lead">Sprawy administracyjne: sale, terminy, sylabusy i dziekanaty. Metodyka, jakość dydaktyki oraz wsparcie e-learningowe i techniczne. Zacznij od swojej sprawy — przewodnik wskaże właściwą jednostkę i kontakt.</p>
+
+      <!-- Ścieżka: PROBLEM → OBSZAR → JEDNOSTKA → KONTAKT -->
+      <ol class="path">
+        <li><span class="path__num">1</span><span><strong>Twoja sprawa</strong><small>czego dotyczy?</small></span></li>
+        <li><span class="path__num">2</span><span><strong>Obszar</strong><small>wybierz kartę</small></span></li>
+        <li><span class="path__num">3</span><span><strong>Jednostka</strong><small>kto pomoże</small></span></li>
+        <li><span class="path__num">4</span><span><strong>Kontakt</strong><small>napisz e-mail</small></span></li>
+      </ol>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#wsparcie-dydaktyczne">Sprawa dydaktyczna <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn--ghost" href="#wsparcie-techniczne">Problem techniczny <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== WSPARCIE DYDAKTYCZNE (KARTY) =================== -->
+  <section class="section" id="wsparcie-dydaktyczne" aria-labelledby="support-title">
+    <div class="container">
+      <header class="section__head">
+        <p class="section__kicker"><span class="section__num">01</span>Wsparcie dydaktyczne</p>
+        <h2 id="support-title">Gdzie szukać wsparcia procesu dydaktycznego?</h2>
+        <p class="section__sub">Wybierz obszar, którego dotyczy Twoja sprawa.</p>
+      </header>
+
+      <div class="finder">
+        <!-- Wyszukiwarka: podświetla pasujące karty -->
+        <div class="finder__search">
+          <label for="area-search" class="finder__label">Nie wiesz, który obszar? Wpisz słowo kluczowe</label>
+          <div class="search">
+            <svg class="icon search__icon" aria-hidden="true"><use href="#i-search"/></svg>
+            <input id="area-search" type="search" autocomplete="off"
+                   placeholder="np. sala, protokół, Blackboard, sylabus, AI"
+                   aria-describedby="search-status">
+          </div>
+          <p id="search-status" class="finder__status" role="status" aria-live="polite"></p>
+        </div>
+
+        <!-- Komunikat: karty są klikalne -->
+        <p class="hint"><svg class="icon" aria-hidden="true"><use href="#i-pointer"/></svg>Kliknij kartę, aby zobaczyć szczegóły i dane kontaktowe.</p>
+      </div>
+
+      <!-- Karty generowane z js/data.js (window.SUPPORT_AREAS) -->
+      <div class="cards" id="cards"></div>
+
+      <!-- Panel szczegółów — jeden, przenoszony pod wiersz klikniętej karty -->
+      <section class="detail" id="detail-panel" aria-labelledby="detail-title" hidden>
+        <div class="detail__inner" id="detail-content"></div>
+      </section>
+
+      <noscript><p class="noscript">Ta strona wymaga włączonej obsługi JavaScript, aby wyświetlić karty wsparcia.</p></noscript>
+    </div>
+  </section>
+
+  <!-- ========================= SZYBKI WYBÓR ========================= -->
+  <section class="section section--tint" id="szybki-wybor" aria-labelledby="quick-title">
+    <div class="container">
+      <header class="section__head">
+        <p class="section__kicker"><span class="section__num">02</span>Szybki wybór</p>
+        <h2 id="quick-title">Nie wiesz, do kogo się zgłosić?</h2>
+        <p class="section__sub">Znajdź swoją sprawę w lewej kolumnie. Kliknij wiersz, aby zobaczyć pełne dane kontaktowe i zakres wsparcia.</p>
+      </header>
+
+      <div class="quick">
+        <div class="quick__head" aria-hidden="true">
+          <span>Jeśli potrzebujesz…</span><span></span><span>Skontaktuj się z…</span>
+        </div>
+        <!-- Wiersze generowane z js/data.js (window.QUICK_PICK) -->
+        <ul id="quick-rows"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== WSPARCIE TECHNICZNE ====================== -->
+  <section class="section" id="wsparcie-techniczne" aria-labelledby="tech-title">
+    <div class="container">
+      <header class="section__head">
+        <p class="section__kicker"><span class="section__num">03</span>Wsparcie techniczne</p>
+        <h2 id="tech-title">Gdzie szukać wsparcia technicznego?</h2>
+        <p class="section__sub">Problemy techniczne zgłaszaj w systemie JIRA (Helpdesk IT). Kompletne informacje ułatwiają identyfikację i obsługę sprawy.</p>
+      </header>
+
+      <div class="tech">
+        <ol class="steps">
+          <li class="step">
+            <div class="step__top"><span class="step__num">01</span><svg class="icon step__icon" aria-hidden="true"><use href="#i-login"/></svg></div>
+            <h3>Zaloguj się do JIRA</h3>
+            <p>Otwórz portal Helpdesk IT i wybierz kategorię najlepiej odpowiadającą problemowi.</p>
+          </li>
+          <li class="step">
+            <div class="step__top"><span class="step__num">02</span><svg class="icon step__icon" aria-hidden="true"><use href="#i-pen"/></svg></div>
+            <h3>Opisz problem</h3>
+            <p>Podaj system, komunikat błędu, moment wystąpienia oraz wpływ problemu na prowadzenie zajęć.</p>
+          </li>
+          <li class="step">
+            <div class="step__top"><span class="step__num">03</span><svg class="icon step__icon" aria-hidden="true"><use href="#i-paperclip"/></svg></div>
+            <h3>Dodaj materiały</h3>
+            <p>Dołącz zrzut ekranu i dane umożliwiające identyfikację sprawy, np. nazwę kursu lub grupy.</p>
+          </li>
+        </ol>
+
+        <!-- ADRES PORTALU: link pochodzi z przycisku „Otwórz portal” w prezentacji źródłowej -->
+        <a class="portal" href="https://kozminski.snewsletter.com/k3/698/000/26/test/mIfKXMAg/aHR0cHM6Ly9rb3ptaW5za2ktbXkuc2hhcmVwb2ludC5jb20vcGVyc29uYWwvbWtvc21hbGFfa296bWluc2tpX2VkdV9wbCUyRkRvY3VtZW50cyUyRlplc3AlQzMlQjMlQzUlODIlMjBTYWxlc2ZvcmNlJTJGU3lsYWJ1c3klMkREb2NzJTJGU0ZDUk0lMkRaZyVDNSU4MmFzemFuaWUlMjBwcm9ibGVtJUMzJUIzdyUyMHRlY2huaWN6bnljaCUyMHN5bGFidXMlQzMlQjN3JTJEMDkwNzI1JTJEMTQyOTA4JTJFcGRmJmFtcDtwYXJlbnQ9JTJGcGVyc29uYWwlMkZta29zbWFsYSU1Rmtvem1pbnNraSU1RmVkdSU1RnBsJTJGRG9jdW1lbnRzJTJGWmVzcCVDMyVCMyVDNSU4MiUyMFNhbGVzZm9yY2UlMkZTeWxhYnVzeSUyRERvY3MmYW1wO2dhPTE%253D" target="_blank" rel="noopener">
+          <span class="portal__name">JIRA</span>
+          <span class="portal__sub">Helpdesk IT</span>
+          <span class="portal__cta">Otwórz portal <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
+          <span class="visually-hidden">(otwiera się w nowej karcie)</span>
+        </a>
+      </div>
+
+      <div class="tech-bottom">
+        <div class="checklist">
+          <h3 class="checklist__title">Co warto podać w zgłoszeniu?</h3>
+          <ul>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-monitor"/></svg><div><strong>System lub urządzenie</strong><span>np. Blackboard, Salesforce, Teams</span></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><div><strong>Dokładny opis</strong><span>co nie działa i jaki komunikat się pojawia</span></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-map-pin"/></svg><div><strong>Kontekst</strong><span>nazwa kursu, grupa, sala i czas</span></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-image"/></svg><div><strong>Załączniki</strong><span>zrzut ekranu bez danych wrażliwych</span></div></li>
+          </ul>
+        </div>
+
+        <aside class="callout" id="problem-z-sylabusem" aria-labelledby="syl-title">
+          <p class="callout__kicker" id="syl-title"><svg class="icon" aria-hidden="true"><use href="#i-hash"/></svg>Problem z sylabusem?</p>
+          <p class="callout__main">Koniecznie podaj numer sylabusa</p>
+          <p class="callout__text">Numer znajduje się na pierwszej stronie sylabusa, np. <span class="syl-no">S-00040128</span>.</p>
+        </aside>
+      </div>
+
+      <p class="urgent"><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg>Pilne problemy podczas trwających zajęć opisz jednoznacznie w tytule zgłoszenia.</p>
+    </div>
+  </section>
+</main>
+
+<!-- ============================ STOPKA ============================ -->
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <img class="site-footer__logo" src="assets/logo-kozminski.svg" alt="Akademia Leona Koźmińskiego" width="96" height="48">
+    <img class="site-footer__acc" src="assets/akredytacje.svg" alt="Akredytacje i członkostwa: EQUIS, AACSB, AMBA, Global Network for Advanced Management, EUonAIR, FT European Business Schools Ranking">
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
